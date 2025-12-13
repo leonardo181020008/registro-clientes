@@ -1,11 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
    <title>Registro Clientes</title>
 </head>
+
 <body>
-   
+
+   <!-- Header -->
+   <header class="header">
+      <h1 class="header__title">Registro de Clientes</h1>
+   </header>
+
+   <!-- Main -->
+   <main class="main">
+
+      <!-- Sección Formulario -->
+      <section class="form-section">
+         <h2 class="form-section__title">Registro del Cliente</h2>
+
+         <form class="form-client">
+
+            <fieldset class="form-client__fieldset">
+               <legend class="form-client__legend">Datos del Cliente</legend>
+
+               <div class="form-client__group">
+                  <label for="nombre" class="form-client__label">Nombre</label>
+                  <input
+                     type="text"
+                     id="nombre"
+                     name="nombre"
+                     class="form-client__input"
+                     required
+                     minlength="3"
+                     placeholder="José">
+                  <div class="form-client__error" id="error-nombre"></div>
+               </div>
+
+               <div class="form-client__group">
+                  <label for="apellido-paterno" class="form-client__label">Apellido Paterno</label>
+                  <input
+                     type="text"
+                     id="apellido-paterno"
+                     name="apellidoPaterno"
+                     class="form-client__input"
+                     required
+                     placeholder="Ramírez">
+                  <div class="form-client__error" id="error-apellido-paterno"></div>
+               </div>
+
+               <div class="form-client__group">
+                  <label for="apellido-materno" class="form-client__label">Apellido Materno</label>
+                  <input
+                     type="text"
+                     id="apellido-materno"
+                     name="apellidoMaterno"
+                     class="form-client__input"
+                     required
+                     placeholder="Santiago">
+                  <div class="form-client__error" id="error-apellido-materno"></div>
+               </div>
+
+               <div class="form-client__group">
+                  <label for="email" class="form-client__label">Email</label>
+                  <input
+                     type="email"
+                     id="email"
+                     name="email"
+                     class="form-client__input"
+                     required
+                     placeholder="correo@gmail.com">
+                  <div class="form-client__error" id="error-email"></div>
+               </div>
+
+               <div class="form-client__group">
+                  <label for="telefono" class="form-client__label">Teléfono</label>
+                  <input
+                     type="text"
+                     id="telefono"
+                     name="telefono"
+                     class="form-client__input"
+                     required
+                     placeholder="783-562-5472">
+                  <div class="form-client__error" id="error-telefono"></div>
+               </div>
+
+               <div class="form-client__group">
+                  <label for="direccion" class="form-client__label">Dirección</label>
+                  <input
+                     type="text"
+                     id="direccion"
+                     name="direccion"
+                     class="form-client__input"
+                     required
+                     placeholder="Calle San Marcos #21, Col. Centro">
+                  <div class="form-client__error" id="error-direccion"></div>
+               </div>
+
+               <div class="form-client__group">
+                  <label for="productos" class="form-client__label">Producto</label>
+                  <input
+                     type="text"
+                     id="productos"
+                     name="productos"
+                     class="form-client__input"
+                     required
+                     placeholder="Laptop">
+                  <div class="form-client__error" id="error-productos"></div>
+               </div>
+
+            </fieldset>
+
+            <!-- Acciones -->
+            <div class="form-client__actions">
+               <button type="submit" class="form-client__button form-client__button--primary">
+                  Registrar
+               </button>
+
+               <button type="reset" class="form-client__button">
+                  Limpiar
+               </button>
+
+               <button type="button" class="form-client__button form-client__button--danger">
+                  Eliminar
+               </button>
+
+               <button type="button" class="form-client__button form-client__button--warning">
+                  Modificar
+               </button>
+
+               <small class="form-client__note">*Campos obligatorios*</small>
+               <div class="form-client__message" id="mensaje"></div>
+            </div>
+
+         </form>
+      </section>
+
+      <!-- Sección Tabla -->
+      <section class="clients">
+         <h2 class="clients__title">Clientes Registrados</h2>
+
+         <table class="clients__table">
+            <thead class="clients__thead">
+               <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Apellido Paterno</th>
+                  <th>Apellido Materno</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                  <th>Dirección</th>
+                  <th>Producto</th>
+                  <th>Fecha</th>
+               </tr>
+            </thead>
+            <tbody class="clients__tbody">
+            </tbody>
+         </table>
+      </section>
+
+   </main>
+
+   <script src="script.js"></script>
+
 </body>
 </html>
