@@ -3,7 +3,11 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="./css/styles.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
    <title>Registro Clientes</title>
 </head>
 
@@ -110,60 +114,129 @@
                      placeholder="Laptop">
                   <div class="form-client__error" id="error-productos"></div>
                </div>
+               <small class="form-client__note">*Campos obligatorios*</small>
 
             </fieldset>
 
             <!-- Acciones -->
-            <div class="form-client__actions">
-               <button type="submit" class="form-client__button form-client__button--primary">
-                  Registrar
-               </button>
+            <div class="form-actions">
+               <div class="form-actions__card">
 
-               <button type="reset" class="form-client__button">
-                  Limpiar
-               </button>
+                  <div class="form-client__actions">
+                     <button type="submit" class="form-client__button form-client__button--primary">
+                        Registrar
+                     </button>
 
-               <button type="button" class="form-client__button form-client__button--danger">
-                  Eliminar
-               </button>
+                     <button type="reset" class="form-client__button">
+                        Limpiar
+                     </button>
 
-               <button type="button" class="form-client__button form-client__button--warning">
-                  Modificar
-               </button>
+                     <button type="button" class="form-client__button form-client__button--danger">
+                        Eliminar
+                     </button>
 
-               <small class="form-client__note">*Campos obligatorios*</small>
-               <div class="form-client__message" id="mensaje"></div>
-            </div>
+                     <button type="button" class="form-client__button form-client__button--warning">
+                        Modificar
+                     </button>
+                  </div>
+
+                  <div class="form-client__message" id="formMessage"></div>
+
+                  </div>
+               </div>
 
          </form>
       </section>
 
       <!-- Sección Tabla -->
       <section class="clients">
+
          <h2 class="clients__title">Clientes Registrados</h2>
 
-         <table class="clients__table">
-            <thead class="clients__thead">
-               <tr>
-                  <th>#</th>
-                  <th>Nombre</th>
-                  <th>Apellido Paterno</th>
-                  <th>Apellido Materno</th>
-                  <th>Email</th>
-                  <th>Teléfono</th>
-                  <th>Dirección</th>
-                  <th>Producto</th>
-                  <th>Fecha</th>
-               </tr>
-            </thead>
-            <tbody class="clients__tbody">
-            </tbody>
-         </table>
+         <div class="clients__card">
+            <div class="clients__table-wrapper">
+               <table class="clients__table">
+
+            <caption class="clients__caption">
+               Lista completa de clientes con detalles de contacto y producto.
+            </caption>
+
+               <thead class="clients__thead">
+                  <tr>
+                     <th data-col="id">#</th>
+                     <th data-col="nombre">Nombre</th>
+                     <th data-col="apellido_paterno">Apellido Paterno</th>
+                     <th data-col="apellido_materno">Apellido Materno</th>
+                     <th data-col="email">Email</th>
+                     <th data-col="telefono">Teléfono</th>
+                     <th data-col="direccion">Dirección</th>
+                     <th data-col="producto">Producto</th>
+                     <th data-col="fecha">Fecha</th>
+                  </tr>
+               </thead>
+
+               <tbody class="clients__tbody">
+                  <tr>
+                     <td>1</td>
+                  <td>EJE</td>
+                  <td>EJE</td>
+                  <td>EJE</td>
+                  <td>EJE</td>
+                  <td>EJE</td>
+                  <td>EJE</td>
+                  <td>EJE</td>
+                  <td>EJE</td>
+                  </tr>
+               </tbody>
+
+            </table>
+            </div>
+
+         </div>
+
       </section>
 
    </main>
 
-   <script src="script.js"></script>
+   <!-- tu HTML -->
+
+<script>
+const form = document.querySelector(".form-client");
+const submitBtn = document.querySelector(".form-client__button--primary");
+const message = document.getElementById("formMessage");
+
+form.addEventListener("submit", (e) => {
+   e.preventDefault();
+
+   submitBtn.classList.remove("is-success", "is-error");
+   message.textContent = "";
+   message.className = "form-client__message";
+
+   submitBtn.classList.add("is-loading");
+
+   setTimeout(() => {
+      submitBtn.classList.remove("is-loading");
+
+      const success = Math.random() > 0.3;
+
+      if (success) {
+         submitBtn.classList.add("is-success");
+         message.textContent = "Cliente registrado correctamente ✔";
+         message.classList.add("form-client__message--success");
+         form.reset();
+      } else {
+         submitBtn.classList.add("is-error");
+         message.textContent = "Error al registrar cliente ❌";
+         message.classList.add("form-client__message--error");
+      }
+
+      setTimeout(() => {
+         submitBtn.classList.remove("is-success", "is-error");
+      }, 2000);
+
+   }, 1500);
+});
+</script>
 
 </body>
 </html>
