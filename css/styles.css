@@ -2,27 +2,27 @@
    1️⃣ VARIABLES
 ===================================================== */
 :root {
-   /* 🎯 Colores base */
-   --color-bg-main: #0b0b0b;
-   --color-bg-card: #121212;
-   --color-text-main: #ffffff;
-   --color-text-muted: #cfcfcf;
+  /* 🎯 Colores base */
+  --color-bg-main: #0b0b0b;
+  --color-bg-card: #121212;
+  --color-text-main: #ffffff;
+  --color-text-muted: #cfcfcf;
 
-   /* 🍷 Vino */
-   --color-primary: #7b1e3a;
-   --color-primary-dark: #5a162b;
+  /* 🍷 Vino */
+  --color-primary: #7b1e3a;
+  --color-primary-dark: #5a162b;
 
-   /* ✨ Neon */
-   --color-neon: #ff2f6d;
-   --color-neon-soft: rgba(255, 47, 109, 0.2);
+  /* ✨ Neon */
+  --color-neon: #ff2f6d;
+  --color-neon-soft: rgba(255, 47, 109, 0.2);
 
-   /* ⚠️ Estados */
-   --color-error: #ff4d6d;
-   --color-success: #4cff9a;
+  /* ⚠️ Estados */
+  --color-error: #ff4d6d;
+  --color-success: #4cff9a;
 
-   /* 🌈 Gradiente */
-   --gradient-primary: linear-gradient(135deg, #7b1e3a, #ff2f6d);
-   --ease-ui: cubic-bezier(.4, 0, .2, 1);
+  /* 🌈 Gradiente */
+  --gradient-primary: linear-gradient(135deg, #7b1e3a, #ff2f6d);
+  --ease-ui: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =====================================================
@@ -31,62 +31,62 @@
 *,
 *::before,
 *::after {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-   background-color: var(--color-bg-main);
-   color: var(--color-text-main);
-   font-family: 'Inter';
-   line-height: 1.6;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: "Inter";
+  line-height: 1.6;
 }
 
 /* =====================================================
    3️⃣ LAYOUT GLOBAL
 ===================================================== */
 .main {
-   display: grid;
-   grid-template-columns: 1fr;
-   gap: 2rem;
-   padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 @media (min-width: 768px) {
-   .main {
-      grid-template-columns: 1fr 2fr;
-   }
+  .main {
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 /* =====================================================
    4️⃣ HEADER
 ===================================================== */
 .header {
-   width: 100%;
-   background: var(--gradient-primary);
-   padding: 0.8rem 1rem;
-   text-align: center;
+  width: 100%;
+  background: var(--gradient-primary);
+  padding: 0.8rem 1rem;
+  text-align: center;
 }
 
 .header__title {
-   font-size: 1.4rem;
-   font-weight: 600;
-   letter-spacing: 1px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 /* =====================================================
    5️⃣ SECCIONES / CONTENEDORES
 ===================================================== */
 .clients {
-   display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-section__title,
 .clients__title {
-   font-size: 1.1em;
-   margin-bottom: 1em;
+  font-size: 1.1em;
+  margin-bottom: 1em;
 }
 
 /* =====================================================
@@ -95,119 +95,116 @@ body {
 .form-client,
 .clients__card,
 .form-actions__card {
-   background-color: var(--color-bg-card);
-   border-radius: 16px;
-   padding: 1.5rem;
+  background-color: var(--color-bg-card);
+  border-radius: 16px;
+  padding: 1.5rem;
 
-   border: 2px solid transparent;
-   background:
-      linear-gradient(var(--color-bg-card), var(--color-bg-card)) padding-box,
-      var(--gradient-primary) border-box;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--color-bg-card), var(--color-bg-card))
+      padding-box,
+    var(--gradient-primary) border-box;
 
-   box-shadow: 0 0 20px rgba(255, 47, 109, 0.08);
-   animation: fadeUp 0.6s ease both;
+  box-shadow: 0 0 20px rgba(255, 47, 109, 0.08);
+  animation: fadeUp 0.6s ease both;
 }
 
 .form-client {
-   padding: 1rem;
+  padding: 1rem;
 }
 
 .form-client:hover,
 .clients__card:hover,
 .form-actions__card:hover {
-   box-shadow: 0 0 30px rgba(255, 47, 109, 0.15);
+  box-shadow: 0 0 30px rgba(255, 47, 109, 0.15);
 }
 
 /* =====================================================
    7️⃣ FORMULARIO
 ===================================================== */
 .form-client__fieldset {
-   display: grid;
-   grid-template-columns: 1fr;
-   gap: 0.8rem 1rem;
-   border: 1px solid rgba(255, 47, 109, 0.4);
-   border-radius: 10px;
-   padding: 1.2rem;
-   padding-top: 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem 1rem;
+  border: 1px solid rgba(255, 47, 109, 0.4);
+  border-radius: 10px;
+  padding: 1.2rem;
+  padding-top: 1.6rem;
 }
 
 @media (min-width: 768px) {
-   .form-client__fieldset {
-      grid-template-columns: repeat(2, 1fr);
-   }
+  .form-client__fieldset {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form-client__legend {
-   padding: 0 0.5rem;
-   font-size: 0.85rem;
-   font-weight: 600;
-   color: var(--color-primary);
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
 .form-client__group {
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   gap: 0.3rem;
-   margin-bottom: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0;
 }
 
 .form-client__group::after {
-   content: "";
-   position: absolute;
-   left: 0;
-   right: 0;
-   bottom: -2px;
-   height: 2px;
-   background: linear-gradient(
-      90deg,
-      transparent,
-      var(--color-neon),
-      transparent
-   );
-   opacity: 0;
-   transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-neon),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .form-client__group:focus-within::after {
-   opacity: 0.8;
+  opacity: 0.8;
 }
 
 .form-client__label {
-   font-size: 0.8rem;
-   color: var(--color-text-muted);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
 }
 
 .form-client__input {
-   caret-color: var(--color-neon);
-   background: transparent;
-   border: 1px solid var(--color-text-muted);
-   border-radius: 8px;
-   padding: 0.45rem 0.6rem;
-   font-size: 0.85rem;
-   color: var(--color-text-main);
+  caret-color: var(--color-neon);
+  background: transparent;
+  border: 1px solid var(--color-text-muted);
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-text-main);
 
-   transition:
-      border-color 0.3s var(--ease-ui),
-      box-shadow 0.3s var(--ease-ui),
-      transform 0.2s var(--ease-ui);
+  transition: border-color 0.3s var(--ease-ui), box-shadow 0.3s var(--ease-ui),
+    transform 0.2s var(--ease-ui);
 }
 
 .form-client__input::placeholder {
-   color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .form-client__input:hover {
-   border-color: rgba(255, 47, 109, 0.5);
-   box-shadow: 0 0 30px rgba(255, 47, 109, 0.18);
+  border-color: rgba(255, 47, 109, 0.5);
+  box-shadow: 0 0 30px rgba(255, 47, 109, 0.18);
 }
 
 .form-client__input:focus {
-   outline: none;
-   border-color: var(--color-neon);
-   box-shadow:
-      0 0 0 1px rgba(255, 47, 109, 0.35),
-      0 0 12px rgba(255, 47, 109, 0.15);
+  outline: none;
+  border-color: var(--color-neon);
+  box-shadow: 0 0 0 1px rgba(255, 47, 109, 0.35),
+    0 0 12px rgba(255, 47, 109, 0.15);
 }
 
 /* ===============================
@@ -215,40 +212,39 @@ body {
 ================================ */
 
 .form-client__group:focus-within .form-client__label {
-   color: var(--color-neon);
-   transform: translateY(-1px);
-   transition: color 0.3s ease, transform 0.3s ease;
+  color: var(--color-neon);
+  transform: translateY(-1px);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-
 .form-client__error {
-   font-size: 0.8rem;
-   color: var(--color-error);
-   min-height: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-error);
+  min-height: 1rem;
 }
 
 /* =====================================================
    8️⃣ ACCIONES / BOTONES
 ===================================================== */
 #btnGuardar:disabled {
-   opacity: 0.4;
-   cursor: not-allowed;
-   filter: grayscale(1);
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(1);
 }
 
 #btnGuardar {
-   transition: all 0.3s var(--ease-ui);
+  transition: all 0.3s var(--ease-ui);
 }
 
 .form-actions {
-   margin-top: 0.8rem;
+  margin-top: 0.8rem;
 }
 
 .form-client__actions {
-   display: flex;
-   justify-content: center;
-   gap: 0.6rem;
-   flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
 /* ===============================
@@ -256,62 +252,59 @@ body {
 ================================ */
 
 .clients__actions {
-   white-space: normal; /* 🔥 clave */
-   text-align: center;
-   min-width: 130px;
+  white-space: normal; /* 🔥 clave */
+  text-align: center;
+  min-width: 130px;
 }
 
 .clients__actions-wrapper {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 0.4rem;
-   flex-wrap: wrap; /* 🔥 evita romper la tabla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap; /* 🔥 evita romper la tabla */
 }
 
 .clients__actions-wrapper .form-client__button {
-   padding: 0.35rem 0.7rem;
-   font-size: 0.75rem;
-   border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+  border-radius: 8px;
 }
 
-
 .form-client__button {
-   position: relative;
-   overflow: hidden;
-   background: transparent;
-   font-size: 0.85rem;
-   border: 1px solid var(--color-text-muted);
-   color: var(--color-text-main);
-   padding: 0.6rem 1.2rem;
-   border-radius: 10px;
-   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-text-muted);
+  color: var(--color-text-main);
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
 
-   transition:
-      background 0.3s var(--ease-ui),
-      box-shadow 0.3s var(--ease-ui),
-      transform 0.2s var(--ease-ui);
+  transition: background 0.3s var(--ease-ui), box-shadow 0.3s var(--ease-ui),
+    transform 0.2s var(--ease-ui);
 }
 
 .form-client__button:hover {
-   transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .form-client__button--primary {
-   border: none;
-   background: var(--gradient-primary);
-   box-shadow: 0 0 10px var(--color-neon-soft);
+  border: none;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 10px var(--color-neon-soft);
 }
 
 .form-client__button--primary:hover {
-   box-shadow: 0 0 20px var(--color-neon);
-   transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 0 20px var(--color-neon);
+  transform: translateY(-2px) scale(1.01);
 }
 
 .form-client__button:not(.form-client__button--primary):hover {
-   border-color: var(--color-neon);
-   color: var(--color-neon);
-   background: rgba(255, 255, 255, 0.04);
+  border-color: var(--color-neon);
+  color: var(--color-neon);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 /* ===============================
@@ -319,167 +312,162 @@ body {
 ================================ */
 
 .form-client__button::after {
-   content: "";
-   position: absolute;
-   inset: 0;
-   border-radius: inherit;
-   background: rgba(255, 255, 255, 0.06);
-   opacity: 0;
-   transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .form-client__button:hover::after {
-   opacity: 1;
+  opacity: 1;
 }
 
 .form-client__button--primary {
-   position: relative;
+  position: relative;
 }
 
 .form-client__button--primary::before {
-   content: "";
-   position: absolute;
-   inset: -2px;
-   border-radius: inherit;
-   background: var(--gradient-primary);
-   opacity: 0;
-   filter: blur(12px);
-   transition: opacity 0.4s ease;
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: var(--gradient-primary);
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 0.4s ease;
 }
 
 .form-client__button--primary:hover::before {
-   opacity: 0.6;
+  opacity: 0.6;
 }
 
 /* =========================
    NEON BOTONES PREMIUM
 ========================= */
 
-
 .form-client__button.is-loading {
-   pointer-events: none;
-   opacity: 0.7;
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 .form-client__button.is-loading::before {
-   content: "Guardando...";
-   color: transparent;
-   position: absolute;
-   inset: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background: rgba(0,0,0,0.6);
-   border-radius: inherit;
-   border: 1px solid var(--color-neon);
-   animation: neonPulse 1.2s infinite;
-   font-size: 0.8rem;
+  content: "Guardando...";
+  color: transparent;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: inherit;
+  border: 1px solid var(--color-neon);
+  animation: neonPulse 1.2s infinite;
+  font-size: 0.8rem;
 }
 
 .form-client__button.is-success {
-   background: linear-gradient(135deg, #1f8f5f, #4cff9a);
-   box-shadow: 0 0 20px rgba(76, 255, 154, 0.6);
+  background: linear-gradient(135deg, #1f8f5f, #4cff9a);
+  box-shadow: 0 0 20px rgba(76, 255, 154, 0.6);
 }
 
 .form-client__button.is-error {
-   background: linear-gradient(135deg, #7b1e3a, #ff4d6d);
-   box-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
+  background: linear-gradient(135deg, #7b1e3a, #ff4d6d);
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
 }
 
 .form-client__button.is-success,
 .form-client__button.is-error {
-   pointer-events: none;
+  pointer-events: none;
 }
 
-
 .form-client__message {
-   margin-top: 0.8rem;
-   text-align: center;
-   font-size: 0.85rem;
-   opacity: 0;
-   transform: translateY(5px);
-   transition: all 0.4s ease;
+  margin-top: 0.8rem;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.4s ease;
 }
 
 @keyframes neonPulse {
-   0% {
-      box-shadow: 0 0 5px var(--color-neon-soft);
-   }
-   50% {
-      box-shadow: 0 0 15px var(--color-neon);
-   }
-   100% {
-      box-shadow: 0 0 5px var(--color-neon-soft);
-   }
+  0% {
+    box-shadow: 0 0 5px var(--color-neon-soft);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--color-neon);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--color-neon-soft);
+  }
 }
 
 /* =====================================================
    9️⃣ TABLA DE CLIENTES
 ===================================================== */
 .clients__table {
-   width: 100%;
-   border-collapse: separate;
-   border-spacing: 0 8px; /* filas separadas */
-   font-size: 0.85rem;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px; /* filas separadas */
+  font-size: 0.85rem;
 }
 
 .clients__thead th {
-   padding: 0.7rem 0.9rem;
-   text-align: left;
-   font-weight: 500;
-   color: var(--color-text-muted);
-   background: transparent;
-   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Fila */
 .clients__tbody tr {
-   background: rgba(255, 255, 255, 0.03);
-   transition:
-      background 0.3s ease,
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Hover elegante */
 .clients__tbody tr:hover {
-   background: rgba(255, 47, 109, 0.12);
-   transform: translateY(-2px);
-   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 47, 109, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* Celdas */
 .clients__table td {
-   color: var(--color-text-main);
-   padding: 0.7rem 0.9rem;
-   white-space: nowrap;
-   transition: background 0.25s ease;
+  color: var(--color-text-main);
+  padding: 0.7rem 0.9rem;
+  white-space: nowrap;
+  transition: background 0.25s ease;
 }
 
 /* Bordes redondeados por fila */
 .clients__tbody tr td:first-child {
-   border-radius: 8px 0 0 8px;
+  border-radius: 8px 0 0 8px;
 }
 
 .clients__tbody tr td:last-child {
-   border-radius: 0 8px 8px 0;
+  border-radius: 0 8px 8px 0;
 }
 
 /* Caption */
 .clients__caption {
-   margin-top: 0.6rem;
-   font-size: 0.75rem;
-   color: var(--color-text-muted);
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
 }
 
 /* Separadores verticales suaves */
 .clients__table td + td,
 .clients__thead th + th {
-   border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .clients__tbody tr:hover td + td {
-   border-left-color: rgba(255, 47, 109, 0.18);
+  border-left-color: rgba(255, 47, 109, 0.18);
 }
 
 /* ===============================
@@ -487,102 +475,98 @@ body {
 ================================ */
 
 .clients__tbody tr:hover td {
-   background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 /* =====================================================
    🔟 ANIMACIONES
 ===================================================== */
 @keyframes fadeUp {
-   from {
-      opacity: 0;
-      transform: translateY(20px);
-   }
-   to {
-      opacity: 1;
-      transform: translateY(0);
-   }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===============================
    RESPONSIVE HEADER
 ================================ */
 @media (max-width: 767px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.6rem 0.8rem;
+  }
 
-   .header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      padding: 0.6rem 0.8rem;
-   }
-
-   .header__title {
-      font-size: 1.1rem;
-      letter-spacing: 0.5px;
-   }
+  .header__title {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
 }
-
 
 /* ===============================
    RESPONSIVE FORM (MÓVIL)
 ================================ */
 @media (max-width: 767px) {
+  .main {
+    padding: 1rem;
+    gap: 1.2rem;
+  }
 
-   .main {
-      padding: 1rem;
-      gap: 1.2rem;
-   }
+  .form-client {
+    padding: 0.9rem;
+  }
 
-   .form-client {
-      padding: 0.9rem;
-   }
+  .form-client__fieldset {
+    padding: 1rem;
+    gap: 0.6rem;
+  }
 
-   .form-client__fieldset {
-      padding: 1rem;
-      gap: 0.6rem;
-   }
+  .form-client__group {
+    gap: 0.2rem;
+  }
 
-   .form-client__group {
-      gap: 0.2rem;
-   }
+  .form-client__label {
+    font-size: 0.75rem;
+  }
 
-   .form-client__label {
-      font-size: 0.75rem;
-   }
+  .form-client__input {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.8rem;
+  }
 
-   .form-client__input {
-      padding: 0.4rem 0.55rem;
-      font-size: 0.8rem;
-   }
+  .form-client__actions {
+    gap: 0.4rem;
+  }
 
-   .form-client__actions {
-      gap: 0.4rem;
-   }
-
-   .form-client__button {
-      padding: 0.45rem 0.9rem;
-      font-size: 0.75rem;
-   }
+  .form-client__button {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.75rem;
+  }
 }
 
 /* ===============================
    RESPONSIVE TABLA
 ================================ */
 .clients__table-wrapper {
-   width: 100%;
-   overflow-x: auto;
-   -webkit-overflow-scrolling: touch;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 767px) {
+  .clients__table {
+    min-width: 720px;
+    font-size: 0.8rem;
+  }
 
-   .clients__table {
-      min-width: 720px;
-      font-size: 0.8rem;
-   }
-
-   .clients__thead th,
-   .clients__table td {
-      padding: 0.6rem 0.8rem;
-   }
+  .clients__thead th,
+  .clients__table td {
+    padding: 0.6rem 0.8rem;
+  }
 }

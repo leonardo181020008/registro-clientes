@@ -1,255 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-   <!-- =========================
+  <head>
+    <!-- =========================
         CONFIGURACIÓN BÁSICA
    ========================== -->
 
-   <!-- Codificación de caracteres (acentos, ñ, etc.) -->
-   <meta charset="UTF-8">
+    <!-- Codificación de caracteres (acentos, ñ, etc.) -->
+    <meta charset="UTF-8" />
 
-   <!-- Responsive: adapta el diseño a móviles y tablets -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive: adapta el diseño a móviles y tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-   <!-- Hoja de estilos principal -->
-   <link rel="stylesheet" href="./css/styles.css">
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="./css/styles.css" />
 
-   <!-- Carga de la fuente Inter desde Google Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Carga de la fuente Inter desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-   <!-- Título que aparece en la pestaña del navegador -->
-   <title>Registro Clientes</title>
-</head>
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Registro Clientes</title>
+  </head>
 
-<body>
-
-   <!-- =========================
+  <body>
+    <!-- =========================
         HEADER (ENCABEZADO)
    ========================== -->
-   <header class="header">
+    <header class="header">
       <!-- Título principal de la aplicación -->
       <h1 class="header__title">Registro de Clientes</h1>
-   </header>
+    </header>
 
-   <!-- =========================
+    <!-- =========================
         CONTENIDO PRINCIPAL
    ========================== -->
-   <main class="main">
-
+    <main class="main">
       <!-- =========================
            SECCIÓN FORMULARIO
       ========================== -->
       <section class="form-section">
+        <!-- Título del formulario -->
+        <h2 class="form-section__title">Registro del Cliente</h2>
 
-         <!-- Título del formulario -->
-         <h2 class="form-section__title">Registro del Cliente</h2>
+        <!-- Formulario principal -->
+        <!-- El id se usa en JavaScript para validar y enviar datos -->
+        <form id="form-client" class="form-client">
+          <!-- Agrupa los campos del formulario -->
+          <fieldset class="form-client__fieldset">
+            <legend class="form-client__legend">Datos del Cliente</legend>
 
-         <!-- Formulario principal -->
-         <!-- El id se usa en JavaScript para validar y enviar datos -->
-         <form id="form-client" class="form-client">
-
-            <!-- Agrupa los campos del formulario -->
-            <fieldset class="form-client__fieldset">
-               <legend class="form-client__legend">Datos del Cliente</legend>
-
-               <!-- ===== Campo: Nombre ===== -->
-               <div class="form-client__group">
-                  <label for="nombre" class="form-client__label">Nombre</label>
-                  <input
-                     type="text"
-                     id="nombre"
-                     name="nombre"
-                     class="form-client__input"
-                     required
-                     minlength="3"
-                     placeholder="José">
-                  <!-- Contenedor para mostrar errores -->
-                  <div class="form-client__error" id="error-nombre"></div>
-               </div>
-
-               <!-- ===== Campo: Apellido Paterno ===== -->
-               <div class="form-client__group">
-                  <label for="apellido-paterno" class="form-client__label">Apellido Paterno</label>
-                  <input
-                     type="text"
-                     id="apellido-paterno"
-                     name="apellidoPaterno"
-                     class="form-client__input"
-                     required
-                     placeholder="Ramírez">
-                  <div class="form-client__error" id="error-apellido-paterno"></div>
-               </div>
-
-               <!-- ===== Campo: Apellido Materno ===== -->
-               <div class="form-client__group">
-                  <label for="apellido-materno" class="form-client__label">Apellido Materno</label>
-                  <input
-                     type="text"
-                     id="apellido-materno"
-                     name="apellidoMaterno"
-                     class="form-client__input"
-                     required
-                     placeholder="Santiago">
-                  <div class="form-client__error" id="error-apellido-materno"></div>
-               </div>
-
-               <!-- ===== Campo: Email ===== -->
-               <div class="form-client__group">
-                  <label for="email" class="form-client__label">Email</label>
-                  <input
-                     type="email"
-                     id="email"
-                     name="email"
-                     class="form-client__input"
-                     required
-                     placeholder="correo@gmail.com">
-                  <div class="form-client__error" id="error-email"></div>
-               </div>
-
-               <!-- ===== Campo: Teléfono ===== -->
-               <div class="form-client__group">
-                  <label for="telefono" class="form-client__label">Teléfono</label>
-                  <input
-                     type="text"
-                     id="telefono"
-                     name="telefono"
-                     class="form-client__input"
-                     required
-                     placeholder="783-562-5472">
-                  <div class="form-client__error" id="error-telefono"></div>
-               </div>
-
-               <!-- ===== Campo: Dirección ===== -->
-               <div class="form-client__group">
-                  <label for="direccion" class="form-client__label">Dirección</label>
-                  <input
-                     type="text"
-                     id="direccion"
-                     name="direccion"
-                     class="form-client__input"
-                     required
-                     placeholder="Calle San Marcos #21, Col. Centro">
-                  <div class="form-client__error" id="error-direccion"></div>
-               </div>
-
-               <!-- ===== Campo: Producto ===== -->
-               <div class="form-client__group">
-                  <label for="producto" class="form-client__label">Producto</label>
-                  <input
-                     type="text"
-                     id="producto"
-                     name="producto"
-                     class="form-client__input"
-                     required
-                     placeholder="Laptop">
-                  <div class="form-client__error" id="error-producto"></div>
-               </div>
-
-               <!-- Nota informativa -->
-               <small class="form-client__note">*Campos obligatorios*</small>
-            </fieldset>
-
-            <!-- =========================
-                 BOTONES DE ACCIÓN
-            ========================== -->
-            <div class="form-actions">
-               <div class="form-actions__card">
-
-                  <div class="form-client__actions">
-
-                     <!-- Botón para registrar un cliente -->
-                     <!-- Inicia deshabilitado hasta que el formulario sea válido -->
-                     <button 
-                        type="submit" 
-                        id="btnGuardar" 
-                        class="form-client__button form-client__button--primary"
-                        disabled>
-                        Registrar
-                     </button>
-
-                     <!-- Limpia el formulario -->
-                     <button 
-                        type="reset" 
-                        id="btnLimpiar" 
-                        class="form-client__button">
-                        Limpiar
-                     </button>
-
-                     <!-- Botón usado cuando se edita un cliente existente -->
-                     <button 
-                        type="button"
-                        id="btnActualizar"
-                        class="form-client__button">
-                        Actualizar
-                     </button>
-                  </div>
-
-                  <!-- Mensajes de éxito o error -->
-                  <div class="form-client__message" id="formMessage"></div>
-
-               </div>
+            <!-- ===== Campo: Nombre ===== -->
+            <div class="form-client__group">
+              <label for="nombre" class="form-client__label">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-client__input"
+                required
+                minlength="3"
+                placeholder="José"
+              />
+              <!-- Contenedor para mostrar errores -->
+              <div class="form-client__error" id="error-nombre"></div>
             </div>
 
-         </form>
+            <!-- ===== Campo: Apellido Paterno ===== -->
+            <div class="form-client__group">
+              <label for="apellido-paterno" class="form-client__label"
+                >Apellido Paterno</label
+              >
+              <input
+                type="text"
+                id="apellido-paterno"
+                name="apellidoPaterno"
+                class="form-client__input"
+                required
+                placeholder="Ramírez"
+              />
+              <div class="form-client__error" id="error-apellido-paterno"></div>
+            </div>
+
+            <!-- ===== Campo: Apellido Materno ===== -->
+            <div class="form-client__group">
+              <label for="apellido-materno" class="form-client__label"
+                >Apellido Materno</label
+              >
+              <input
+                type="text"
+                id="apellido-materno"
+                name="apellidoMaterno"
+                class="form-client__input"
+                required
+                placeholder="Santiago"
+              />
+              <div class="form-client__error" id="error-apellido-materno"></div>
+            </div>
+
+            <!-- ===== Campo: Email ===== -->
+            <div class="form-client__group">
+              <label for="email" class="form-client__label">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-client__input"
+                required
+                placeholder="correo@gmail.com"
+              />
+              <div class="form-client__error" id="error-email"></div>
+            </div>
+
+            <!-- ===== Campo: Teléfono ===== -->
+            <div class="form-client__group">
+              <label for="telefono" class="form-client__label">Teléfono</label>
+              <input
+                type="text"
+                id="telefono"
+                name="telefono"
+                class="form-client__input"
+                required
+                placeholder="783-562-5472"
+              />
+              <div class="form-client__error" id="error-telefono"></div>
+            </div>
+
+            <!-- ===== Campo: Dirección ===== -->
+            <div class="form-client__group">
+              <label for="direccion" class="form-client__label"
+                >Dirección</label
+              >
+              <input
+                type="text"
+                id="direccion"
+                name="direccion"
+                class="form-client__input"
+                required
+                placeholder="Calle San Marcos #21, Col. Centro"
+              />
+              <div class="form-client__error" id="error-direccion"></div>
+            </div>
+
+            <!-- ===== Campo: Producto ===== -->
+            <div class="form-client__group">
+              <label for="producto" class="form-client__label">Producto</label>
+              <input
+                type="text"
+                id="producto"
+                name="producto"
+                class="form-client__input"
+                required
+                placeholder="Laptop"
+              />
+              <div class="form-client__error" id="error-producto"></div>
+            </div>
+
+            <!-- Nota informativa -->
+            <small class="form-client__note">*Campos obligatorios*</small>
+          </fieldset>
+
+          <!-- =========================
+                 BOTONES DE ACCIÓN
+            ========================== -->
+          <div class="form-actions">
+            <div class="form-actions__card">
+              <div class="form-client__actions">
+                <!-- Botón para registrar un cliente -->
+                <!-- Inicia deshabilitado hasta que el formulario sea válido -->
+                <button
+                  type="submit"
+                  id="btnGuardar"
+                  class="form-client__button form-client__button--primary"
+                  disabled
+                >
+                  Registrar
+                </button>
+
+                <!-- Limpia el formulario -->
+                <button
+                  type="reset"
+                  id="btnLimpiar"
+                  class="form-client__button"
+                >
+                  Limpiar
+                </button>
+
+                <!-- Botón usado cuando se edita un cliente existente -->
+                <button
+                  type="button"
+                  id="btnActualizar"
+                  class="form-client__button"
+                >
+                  Actualizar
+                </button>
+              </div>
+
+              <!-- Mensajes de éxito o error -->
+              <div class="form-client__message" id="formMessage"></div>
+            </div>
+          </div>
+        </form>
       </section>
 
       <!-- =========================
            SECCIÓN TABLA DE CLIENTES
       ========================== -->
       <section class="clients">
+        <h2 class="clients__title">Clientes Registrados</h2>
 
-         <h2 class="clients__title">Clientes Registrados</h2>
+        <div class="clients__card">
+          <div class="clients__table-wrapper">
+            <!-- Tabla donde JS inserta los clientes -->
+            <table class="clients__table" id="tabla-clientes">
+              <caption class="clients__caption">
+                Lista completa de clientes con detalles de contacto y producto.
+              </caption>
 
-         <div class="clients__card">
-            <div class="clients__table-wrapper">
+              <!-- Encabezados de la tabla -->
+              <thead class="clients__thead">
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Apellido Paterno</th>
+                  <th>Apellido Materno</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                  <th>Dirección</th>
+                  <th>Producto</th>
+                  <th>Fecha</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
 
-               <!-- Tabla donde JS inserta los clientes -->
-               <table class="clients__table" id="tabla-clientes">
-
-                  <caption class="clients__caption">
-                     Lista completa de clientes con detalles de contacto y producto.
-                  </caption>
-
-                  <!-- Encabezados de la tabla -->
-                  <thead class="clients__thead">
-                     <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Email</th>
-                        <th>Teléfono</th>
-                        <th>Dirección</th>
-                        <th>Producto</th>
-                        <th>Fecha</th>
-                        <th>Acciones</th>
-                     </tr>
-                  </thead>
-
-                  <!-- El cuerpo se llena dinámicamente con JavaScript -->
-                  <tbody class="clients__tbody">
-                  </tbody>
-
-               </table>
-
-            </div>
-         </div>
-
+              <!-- El cuerpo se llena dinámicamente con JavaScript -->
+              <tbody class="clients__tbody"></tbody>
+            </table>
+          </div>
+        </div>
       </section>
+    </main>
 
-   </main>
-
-   <!-- =========================
+    <!-- =========================
         SCRIPTS
    ========================== -->
 
-   <!-- Validaciones del formulario -->
-   <script type="module" src="js/validaciones.js"></script>
+    <!-- Validaciones del formulario -->
+    <script type="module" src="js/validaciones.js"></script>
 
-   <!-- Lógica de UI (tabla, editar, eliminar, recargar) -->
-   <script type="module" src="js/ui.js"></script>
-
-</body>
+    <!-- Lógica de UI (tabla, editar, eliminar, recargar) -->
+    <script type="module" src="js/ui.js"></script>
+  </body>
 </html>
